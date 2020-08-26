@@ -6,9 +6,12 @@ verify_ssl = true
 [dev-packages]
 localstack = "==0.11.3.3"
 pipenv = "==2020.8.13"
-
-[packages]
-requests = "==2.23.0"
+# Below packages are required to start localstack from python code
+h11 = "==0.10.0"
+amazon_kclpy = "==2.0.1"
+quart = "==0.13.0"
+flask_cors = "==3.0.8"
+moto = "==1.3.14"
 
 [requires]
 python_version = "3.8"
