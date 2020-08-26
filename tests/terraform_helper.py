@@ -1,7 +1,8 @@
-"""Module for terraform utility methods."""
 import subprocess
 
-TERRAFORM_DIR_PATH = "../terraform/"
+import os
+
+TERRAFORM_DIR_PATH = os.path.dirname(os.path.realpath(__file__)) + "/../terraform/"
 
 
 def terraform_init():
