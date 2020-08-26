@@ -6,7 +6,8 @@ data "archive_file" "lambda_zip_file" {
   type        = "zip"
 }
 
-# IAM Policy document for lambda assume role
+
+// IAM Policy document for lambda assume role
 data "aws_iam_policy_document" "lambda_assume_role" {
   version = "2012-10-17"
 
@@ -25,6 +26,7 @@ data "aws_iam_policy_document" "lambda_assume_role" {
   }
 }
 
+
 // Lambda IAM role
 resource "aws_iam_role" "lambda_role" {
   name               = "test-lambda-role"
@@ -34,6 +36,7 @@ resource "aws_iam_role" "lambda_role" {
     create_before_destroy = true
   }
 }
+
 
 // Lambda function terraform code
 resource "aws_lambda_function" "lambda_function" {
