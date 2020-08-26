@@ -1,12 +1,12 @@
 import logging
-
-import requests
+import urllib.request
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
 
 
 def lambda_handler(event, context):
-    response = requests.get("https://example.com")
-    LOGGER.info(response.text)
-    return response.text
+    with urllib.request.urlopen('https://example.com') as response:
+        html = response.read().decode('utf-8')
+        LOGGER.info(html)
+        return html
