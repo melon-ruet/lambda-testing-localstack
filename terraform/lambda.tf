@@ -51,7 +51,7 @@ resource "aws_iam_role" "lambda_role" {
 }
 // Lambda function terraform code
 resource "aws_lambda_function" "lambda_function" {
-  function_name    = "test-lambda-function"
+  function_name    = var.lambda_function_name
   filename         = data.archive_file.lambda_zip_file.output_path
   source_code_hash = data.archive_file.lambda_zip_file.output_base64sha256
   handler          = "handler.lambda_handler"
