@@ -8,6 +8,7 @@ provider "aws" {
   s3_force_path_style         = true
 
   endpoints {
-    lambda         = "http://localhost:4574"
+    lambda         = "http://localhost:4566"
+    iam            = "http://localhost:4566"
   }
 }
