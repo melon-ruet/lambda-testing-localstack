@@ -1,0 +1,19 @@
+# IDE
+.idea
+.vscode
+
+# Byte file/compiled/DLL
+__pycache__
+*.pyc
+.swp
+dist
+
+# Terraform
+.terraform
+.terraform.tfstate.lock.info
+terraform.tfstate
+terraform.tfstate.backup
+
+#local stack setting
+crash.log
+lambda_zip
