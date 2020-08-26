@@ -1,0 +1,14 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+localstack = "==0.11.3.3"
+pipenv = "==2020.8.13"
+
+[packages]
+requests = "==2.23.0"
+
+[requires]
+python_version = "3.8"
