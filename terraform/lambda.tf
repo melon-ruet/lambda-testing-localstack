@@ -50,4 +50,4 @@ resource "aws_lambda_function" "lambda_function" {
   lifecycle {
     create_before_destroy = true
   }
-}K
+}
