@@ -34,6 +34,7 @@ resource "aws_iam_role" "lambda_role" {
     create_before_destroy = true
   }
 }
+
 // Lambda function terraform code
 resource "aws_lambda_function" "lambda_function" {
   function_name    = var.lambda_function_name
